@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Generador de calendarios</title>
+</head>
+
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+
+	<p>Folio: <input type="text" ng-model="producto.folio"></p>
+	<p>Capital: <input type="text" ng-model="producto.capital"></p>
+	<p>Número de pagos: <input type="text" ng-model="producto.numero_de_pagos"></p>
+	<p>Periodo de pago en días: <input type="text" ng-model="producto.periodo_de_pago_en_dias"></p>
+	<p>Días para vencimiento: <input type="text" ng-model="producto.num_dias_para_vencimiento"></p>
+	<p>Tasa de interes: <input type="text" ng-model="producto.tasa_interes"></p>
+	<p>Fecha de inicio: <input type="text" ng-model="producto.fecha_inicio"></p>
+
+	<p>dia de corte: <input type="text" ng-model="tarjeta.dia_de_corte"></p>
+	<p>ultimo dia de pago: <input type="text" ng-model="tarjeta.ultimo_dia_de_pago"></p>
+	<!-- moment para manejo de fechas -->
+
+
+
+	 <button type="button" ng-click="generar()">generar</button> 
+	 {{calendarioDeReembolsos}}
+	 <br><br><br>	 
+	 {{matrizAnidadaParaInsercion}}
+
+
+	 <br><br><br>
+	 <textarea name="textarea" rows="10" cols="50" ng-model="producto.multiplesCreditos">Write something here</textarea>
+	 <button type="button" ng-click="uno()">GenerarDeArchivo</button>
+
+	 <br>
+	 <a id="downloadAnchorElem" style="display:none"></a>
+	 {{prueba01}} 
+</div>
+
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="node_modules/moment/min/moment-with-locales.min.js"></script><!-- moment para manejo de fechas -->
+<script src="controlador.js"></script>
+	
+
+
+</body>
+</html>
