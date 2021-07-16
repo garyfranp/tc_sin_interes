@@ -1,4 +1,4 @@
-# Zero interes
+# Zero interés
 
 Como muchos proyectos nacen de la necesidad de un programador que no logra encontrar una aplicación/solución que cubra sus necesidades.
 
